@@ -1,8 +1,12 @@
 export class MessageSender {
     run() {
-        console.log('Getting the messages');
         const messages: Object[] = this.getMessages();
-        console.log(messages[0]);
+
+        const message1: string = JSON.stringify(messages[0]);
+        const message2: string = JSON.stringify(messages[1]);
+        
+        const result: string = message1 === message2 ? 'JSON files are the same' : 'JSON files are not the same!';
+        console.log(result);
     }
 
     private getMessages(): Object[]{

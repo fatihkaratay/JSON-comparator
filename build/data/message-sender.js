@@ -4,9 +4,11 @@ var MessageSender = /** @class */ (function () {
     function MessageSender() {
     }
     MessageSender.prototype.run = function () {
-        console.log('Getting the messages');
         var messages = this.getMessages();
-        console.log(messages[0]);
+        var message1 = JSON.stringify(messages[0]);
+        var message2 = JSON.stringify(messages[1]);
+        var result = message1 === message2 ? 'JSON files are the same' : 'JSON files are not the same!';
+        console.log(result);
     };
     MessageSender.prototype.getMessages = function () {
         var fs = require('fs');
