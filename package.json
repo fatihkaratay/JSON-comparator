@@ -1,0 +1,20 @@
+{
+  "name": "json-comparisoner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sart:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/core-js": "^2.5.3",
+    "@types/node": "^13.9.8",
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  }
+}
